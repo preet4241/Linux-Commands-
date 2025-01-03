@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Command Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Linux Command Simulator</h1>
+        <div id="output" class="output"></div>
+        <input type="text" id="commandInput" placeholder="Enter Linux command...">
+        <button onclick="executeCommand()">Run Command</button>
+
+        <div class="commands">
+            <button onclick="runPredefinedCommand('ls')">ls</button>
+            <button onclick="runPredefinedCommand('pwd')">pwd</button>
+            <button onclick="runPredefinedCommand('echo Hello World')">echo Hello World</button>
+            <button onclick="runPredefinedCommand('date')">date</button>
+            <!-- Add more buttons for 100 commands here -->
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
